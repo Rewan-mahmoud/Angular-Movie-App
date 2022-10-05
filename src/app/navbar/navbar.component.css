@@ -1,0 +1,21 @@
+nav{
+    background-color: #131722 !important;
+
+
+
+}
+nav a {
+    color: white !important;
+}
+nav li span {
+    color: white !important;
+    cursor: pointer;
+}
+.color {
+   background-color: red !important;
+   border-radius: 10px ;
+   -webkit-border-radius: 10px ;
+   -moz-border-radius: 10px ;
+   -ms-border-radius: 10px ;
+   -o-border-radius: 10px ;
+}

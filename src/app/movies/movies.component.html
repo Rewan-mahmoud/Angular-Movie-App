@@ -1,0 +1,20 @@
+<div class="row mt-5">
+    <nav aria-label="..." >
+        <ul class="pagination pagination-lg">
+          <li *ngFor=" let page of pages" (click)="pagination(page)" class="page-item " aria-current="page">
+            <span class="page-link">{{page}}</span>
+          </li>
+  
+       
+        </ul>
+      </nav>
+ 
+    <div *ngFor="let movie of trendingMovies" class="col-md-2 text-white">
+<div>  
+    <a [routerLink]="['/moviedetails',movie.id]">
+   <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+   <h6 class="my-3 text-center">{{movie.original_title}}</h6>
+</a>
+</div>      
+    </div>
+</div>

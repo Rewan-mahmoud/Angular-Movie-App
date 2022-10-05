@@ -1,0 +1,10 @@
+<div class="row mt-5">
+ 
+    <div *ngFor="let movie of trendingTvShow" class="col-md-2 text-white">
+<div>  
+   <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+   <h6 class="mt-2">{{movie.original_name}}</h6>
+   
+</div>      
+    </div>
+</div>

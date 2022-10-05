@@ -1,0 +1,58 @@
+<div class="row mt-5">
+    <div class="col-md-4 text-white mt-5">
+        <hr class="w-25">
+        <h2>Trending
+            <br>
+            Movies <br> to watch
+            <br>
+            
+        </h2>
+        <p class="text-muted ">most watched movies by days</p>
+        <hr class="w-75">
+    </div>
+    <div *ngFor="let movie of trendingMovies" class="col-md-2 text-white">
+<div>  
+    <a [routerLink]="['/moviedetails',movie.id]">
+        <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+        <h6>{{movie.original_title}}</h6>
+    </a>
+
+   
+</div>      
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-4 text-white mt-3">
+        <hr class="w-25">
+        <h2>Trending
+            <br>
+            Tv <br> to watch now
+            
+        </h2>
+        <h6 class="text-muted ">most watched movies by days</h6>
+        <hr class="w-75">
+    </div>
+    <div *ngFor="let movie of trendingTvShow" class="col-md-2 text-white">
+<div>  
+   <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+   <h6>{{movie.original_name}}</h6>
+</div>      
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-4 text-white mt-3">
+        <hr class="w-25">
+        <h2>Trending
+            <br>
+            people<br> to watch now
+        </h2>
+        <h6 class="text-muted ">most watched movies by days</h6>
+        <hr class="w-75">
+    </div>
+    <div *ngFor="let movie of trendingPeople" class="col-md-2 text-white">
+<div>  
+   <img class="w-100 vh-75" [src]="movie.profile_path" alt="">
+   <h6 class="mt-2">{{movie.original_name}}</h6>
+</div>      
+    </div>
+</div>
